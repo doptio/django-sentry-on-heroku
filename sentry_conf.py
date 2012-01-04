@@ -24,4 +24,16 @@ SENTRY_WEB_HOST = '0.0.0.0'
 SENTRY_WEB_PORT = int(os.environ.get('PORT', 9000))
 
 SENTRY_PUBLIC = False
-SENTRY_KEY = os.environ['SENTRY_KEY']
+SENTRY_KEY = os.environ.get('SENTRY_KEY')
+
+if 'MAIL_TO' in os.environ:
+    ADMINS = [('J. Doe', os.environ['MAIL_TO'])]
+    SENTRY_ADMINS = [os.environ['MAIL_TO']]
+
+SERVER_EMAIL = os.environ.get('SENDGRID_USERNAME')
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME')
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
