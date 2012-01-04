@@ -1,0 +1,2 @@
+#!/bin/sh
+exec sentry start --no-daemon --config=sentry_conf.py
