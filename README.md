@@ -5,6 +5,7 @@ Get this up and runnnig by::
 
     heroku create --stack cedar
     git push heroku
+    heroku addons:add piggyback_ssl
     heroku addons:add shared-database:5mb
     heroku config:add SENTRY_KEY=some-random-access-key
     heroku run sh
