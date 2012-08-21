@@ -1,3 +1,5 @@
 #!/bin/sh
 sentry upgrade --noinput
-exec sentry start
+
+export PYTHON_PATH=.
+exec gunicorn app:application --bind "0.0.0.0:$PORT"

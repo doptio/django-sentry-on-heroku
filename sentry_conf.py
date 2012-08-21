@@ -20,6 +20,8 @@ DATABASES = {
     }
 }
 
+SENTRY_URL_PREFIX = os.environ.get('SENTRY_URL_PREFIX', '')
+
 SENTRY_WEB_HOST = '0.0.0.0'
 SENTRY_WEB_PORT = int(os.environ.get('PORT', 9000))
 

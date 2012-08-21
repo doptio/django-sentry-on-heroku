@@ -9,7 +9,10 @@ Get this up and runnnig by::
     heroku addons:add shared-database:5mb
     heroku config:add SENTRY_KEY=some-random-access-key
     heroku config:add SENTRY_CONF=sentry_conf.py
+    heroku config:add URL_PREFIX=https://${host}
     heroku scale web=1
+
+(Replace `${host}` with the application name assigned by Heroku.)
 
 If you want e-mails start with this::
 
