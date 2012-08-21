@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# django-admin.py wrapper.
+
+export DJANGO_SETTINGS_MODULE=sentry_conf
+export PYTHONPATH=$PWD
+
+exec django-admin.py "$@"

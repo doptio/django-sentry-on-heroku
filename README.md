@@ -20,8 +20,3 @@ If you want e-mails start with this::
 
 And finally go to heroku.com, find your app and the SendGrid addon,
 and complete the account setup.
-
-Running `django-admin.py`
--------------------------
-
-`heroku run env DJANGO_SETTINGS_MODULE=sentry_conf PYTHONPATH=. django-admin.py`
